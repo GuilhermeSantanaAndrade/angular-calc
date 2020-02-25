@@ -1,6 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-
-import { DisplayService } from '../display/display.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -10,11 +8,12 @@ import { DisplayService } from '../display/display.service';
 export class ButtonComponent implements OnInit {
 
   @Input() label: string;
+  @Output() onClick = new EventEmitter();
 
-  constructor(private _displayService: DisplayService) { }
+  constructor() { }
 
-  onClick() {
-    this._displayService.push(this.label);
+  handleClick(key: string) {
+    this.onClick.emit(key);
   }
 
   ngOnInit(): void {

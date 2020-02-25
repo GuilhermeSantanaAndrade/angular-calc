@@ -1,10 +1,11 @@
 <app-display></app-display>
 <div class="app-container">
     <div class="numeros">
-        <app-button *ngFor="let key of ['7', '8', '9', '4', '5', '6', '1', '2', '3']" [label]="key"></app-button>
+        <app-button *ngFor="let key of ['7', '8', '9', '4', '5', '6', '1', '2', '3']" [label]="key"
+            (onClick)="handleClick(key)"></app-button>
     </div>
     <div class="inferior">
-        <app-button class="left" *ngFor="let key of ['0']" [label]="key"></app-button>
-        <app-button class="right" *ngFor="let key of ['=']" [label]="key"></app-button>
+        <app-button class="left" *ngFor="let key of ['0']" [label]="key" (onClick)="handleClick(key)"></app-button>
+        <app-button class="right" *ngFor="let key of ['=']" [label]="key" (onClick)="handleClick(key)"></app-button>
     </div>
 </div>
