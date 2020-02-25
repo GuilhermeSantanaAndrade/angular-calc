@@ -1,0 +1,21 @@
+.display-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-display, .history-display {
+    background: rgba(240, 240, 240, 0.938);
+    
+    width: 150px;
+    height: 25px;
+    text-align: right;
+    margin-bottom: 1px;
+}
+
+.input-display {
+    font-weight: bold;
+}
+
+.history-display {
+    font-size: 12px;
+}

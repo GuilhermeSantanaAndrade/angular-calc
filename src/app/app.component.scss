@@ -1,0 +1,26 @@
+.app-container {
+
+  .numeros {
+    width: 150px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1px;
+  }
+
+  .inferior {
+    margin-top: 1px;
+    width: 150px;
+    height: 49.33px;    
+    display: flex;
+
+    .left {
+      width: 99.66px;
+      margin-right: 1px;
+    }
+
+    .right {
+      width: 49.33px;
+    }
+  }
+}
