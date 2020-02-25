@@ -16,6 +16,10 @@ export class DisplayComponent implements OnInit {
     return this.history.join('');
   }
 
+  getLastElement(): string {
+    return this.history[this.history.length - 1] || '';
+  }
+
   ngOnInit(): void {
     this._displayService.updatedKeys.subscribe(infos => {
       this.history = infos.total
